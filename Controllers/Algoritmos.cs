@@ -25,7 +25,7 @@ public class AlgoritmosController : ControllerBase
         
         }catch(Exception ex)
         {
-            return new ContentResult();
+            return new StatusCode(500);
         }
     }
 }
