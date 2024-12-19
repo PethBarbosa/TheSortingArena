@@ -12,7 +12,6 @@ public class BubbleSort
     public double[] OrderBy(double[] lista)
     {
         var contemAlteracao = false;
-
         do
         {
             if (contemAlteracao)
