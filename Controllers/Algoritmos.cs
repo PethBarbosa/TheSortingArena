@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Mvc;
 using TheSortingArena.Algoritmos;
 using TheSortingArena.Entidades;
+using System.Diagnostics;
 
 namespace TheSortingArena.Controllers;
 
@@ -12,20 +13,29 @@ public class AlgoritmosController : ControllerBase
     {
         try
         {
-            Console.WriteLine("Acessando a controller");
-            var listaValida = Filtro.Tratamento(listaNumerica.lista);
+            var listaValida = Filtro.Tratamento(listaNumerica.lista ?? "");
+            var bodyRetorno = new Dictionary<string, string>();
+            var temporizador = new Stopwatch();
 
             if (listaNumerica.TipoAlgoritmo == TipoAlgoritmo.BubbleSort)
             {
-                var listaBubble = new BubbleSort(listaValida){};
-                Console.WriteLine(listaBubble.OrderBy(listaBubble.Bubbles));
+                var conjunto = new BubbleSort(listaValida){};
+                temporizador.Start();
+                var listaOrdenada = conjunto.OrderBy();
+                temporizador.Stop();
+
+                bodyRetorno.Add("conjunto", string.Join(",", listaOrdenada));
+                bodyRetorno.Add("tempoMs", $"{ temporizador.ElapsedMilliseconds} ms");
+                bodyRetorno.Add("tempoTicks", $"{temporizador.ElapsedTicks} ticks");
+
+                return Ok(bodyRetorno);
             }
 
             return StatusCode(200);
         
         }catch(Exception ex)
         {
-            return new StatusCode(500);
+            return StatusCode(500);
         }
     }
 }

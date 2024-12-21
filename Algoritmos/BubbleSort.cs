@@ -4,20 +4,22 @@ public class BubbleSort
 {
   public double[]? Bubbles { get; set;}
 
-    public BubbleSort(IEnumerable<double> lista) 
+    public BubbleSort(double[] lista) 
     {
-        Bubbles = lista.ToArray();
+        Bubbles = lista;
     }
 
-    public double[] OrderBy(double[] lista)
+    public double[] OrderBy()
     {
+        var lista = this.Bubbles;
+
         var contemAlteracao = false;
         do
         {
             if (contemAlteracao)
                 contemAlteracao = false;
 
-            for (var i = 0; i < lista.Length; i++)
+            for (var i = 0; i < (lista.Length - 1); i++)
             {
                 if (lista[i] > lista[i + 1])
                 {
@@ -29,7 +31,7 @@ public class BubbleSort
             }
 
         }while(contemAlteracao);
-        
-         return lista;
+
+        return lista;
     }
 }

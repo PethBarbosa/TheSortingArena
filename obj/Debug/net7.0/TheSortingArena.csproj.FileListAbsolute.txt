@@ -31,3 +31,4 @@ C:\Repositorios\anything\TheSortingArena\obj\Debug\net7.0\refint\TheSortingArena
 C:\Repositorios\anything\TheSortingArena\obj\Debug\net7.0\TheSortingArena.pdb
 C:\Repositorios\anything\TheSortingArena\obj\Debug\net7.0\TheSortingArena.genruntimeconfig.cache
 C:\Repositorios\anything\TheSortingArena\obj\Debug\net7.0\ref\TheSortingArena.dll
+C:\Repositorios\anything\TheSortingArena\bin\Debug\net7.0\Newtonsoft.Json.dll

@@ -1,12 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "0iDn+PlERDBlAht9b9k2aGxWmEvaV2MIcgGxwAzogxmXMc0uXP8GwA8KUk1IVAW3pFU6aEcvhMsUGGOECTXnVA==",
+  "dgSpecHash": "AJ3kMBM6J4n6NmAN1bUWl8QkbXZyLotqjE6hi/84MsTuWirWv8QR22T8yTzxuF2F6gKtDRDekjcxaSvYwxl1YA==",
   "success": true,
   "projectFilePath": "C:\\Repositorios\\anything\\TheSortingArena\\TheSortingArena.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\patrick.barbosa\\.nuget\\packages\\microsoft.aspnetcore.openapi\\7.0.11\\microsoft.aspnetcore.openapi.7.0.11.nupkg.sha512",
     "C:\\Users\\patrick.barbosa\\.nuget\\packages\\microsoft.extensions.apidescription.server\\6.0.5\\microsoft.extensions.apidescription.server.6.0.5.nupkg.sha512",
     "C:\\Users\\patrick.barbosa\\.nuget\\packages\\microsoft.openapi\\1.4.3\\microsoft.openapi.1.4.3.nupkg.sha512",
+    "C:\\Users\\patrick.barbosa\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512",
     "C:\\Users\\patrick.barbosa\\.nuget\\packages\\swashbuckle.aspnetcore\\6.5.0\\swashbuckle.aspnetcore.6.5.0.nupkg.sha512",
     "C:\\Users\\patrick.barbosa\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\6.5.0\\swashbuckle.aspnetcore.swagger.6.5.0.nupkg.sha512",
     "C:\\Users\\patrick.barbosa\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\6.5.0\\swashbuckle.aspnetcore.swaggergen.6.5.0.nupkg.sha512",
