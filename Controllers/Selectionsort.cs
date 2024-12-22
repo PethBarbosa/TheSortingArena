@@ -5,7 +5,7 @@ using System.Diagnostics;
 
 namespace TheSortingArena.Controllers;
 
-[Route("Selectionsort")]
+[Route("selectionsort")]
 public class SelectionsortController : ControllerBase
 {
 

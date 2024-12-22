@@ -1,3 +1,6 @@
+using Microsoft.AspNetCore.Mvc;
+using System.Reflection.Metadata.Ecma335;
+
 namespace TheSortingArena.Algoritmos;
 
 public class SeletionSort
@@ -16,14 +19,17 @@ public class SeletionSort
         var lista = this.Bubbles;
         var indiceMenorValor = 0;
 
-        for (var i = 0; i < (lista.Length - 1); i++)
+        for (var x = 0; x < lista.Length; x++)
         {
-            if (lista[i] < lista[i + 1])
+            for (var i = x; i < lista.Length; i++)
             {
-                indiceMenorValor = i;
+                if (lista[i] < lista[indiceMenorValor])
+                    indiceMenorValor = i;
             }
 
- 
+            var temp = lista[x];
+            lista[x] = lista[indiceMenorValor];
+            lista[indiceMenorValor] = temp;
         }
 
         return lista;
