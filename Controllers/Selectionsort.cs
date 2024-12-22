@@ -5,9 +5,10 @@ using System.Diagnostics;
 
 namespace TheSortingArena.Controllers;
 
-[Route("algoritmos")]
-public class AlgoritmosController : ControllerBase
+[Route("selectionsort")]
+public class SelectionsortController : ControllerBase
 {
+
     [HttpPost]
     public IActionResult Processar([FromBody] Conjunto listaNumerica)
     {
@@ -33,9 +34,9 @@ public class AlgoritmosController : ControllerBase
 
             return StatusCode(200);
         
-        }catch(Exception ex)
+        }catch
         {
-            return StatusCode(500);
+            return BadRequest();
         }
     }
 }
