@@ -14,8 +14,6 @@ public class SeletionSort
 
     public double[] OrderBy()
     {
-        //Saber quem é o menor de todos ?
-        //Quem é o menor de todos e maior que o da primeira posição ?
         var lista = this.Bubbles;
         var indiceMenorValor = 0;
 
