@@ -18,21 +18,17 @@ public class BubblesortController : ControllerBase
             var bodyRetorno = new Dictionary<string, string>();
             var temporizador = new Stopwatch();
 
-            if (listaNumerica.TipoAlgoritmo == TipoAlgoritmo.BubbleSort)
-            {
-                var conjunto = new BubbleSort(listaValida){};
-                temporizador.Start();
-                var listaOrdenada = conjunto.OrderBy();
-                temporizador.Stop();
+            var conjunto = new BubbleSort(listaValida){};
+            temporizador.Start();
+            var listaOrdenada = conjunto.OrderBy();
+            temporizador.Stop();
 
-                bodyRetorno.Add("conjunto", string.Join(",", listaOrdenada));
-                bodyRetorno.Add("tempoMs", $"{ temporizador.ElapsedMilliseconds} ms");
-                bodyRetorno.Add("tempoTicks", $"{temporizador.ElapsedTicks} ticks");
+            bodyRetorno.Add("conjunto", string.Join(",", listaOrdenada));
+            bodyRetorno.Add("tempoMs", $"{ temporizador.ElapsedMilliseconds} ms");
+            bodyRetorno.Add("tempoTicks", $"{temporizador.ElapsedTicks} ticks");
 
-                return Ok(bodyRetorno);
-            }
+            return Ok(bodyRetorno);
 
-            return StatusCode(200);
         
         }catch
         {

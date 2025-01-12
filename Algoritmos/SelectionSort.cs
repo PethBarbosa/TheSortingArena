@@ -21,7 +21,7 @@ public class SeletionSort
         {
             for (var i = x; i < lista.Length; i++)
             {
-                if (lista[i] < lista[indiceMenorValor])
+                if (lista[i] < lista[x])
                     indiceMenorValor = i;
             }
 

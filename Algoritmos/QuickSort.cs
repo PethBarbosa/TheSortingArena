@@ -17,11 +17,24 @@ public class QuickSort
         var lista = this.Bubbles;
         var listaOrdenada = OrdenarRecursivo(lista);
 
-        return lista;
+        return listaOrdenada;
     }
 
     private double[] OrdenarRecursivo(double[] lista)
     {
+        var indicePivo = 0;
+        var direita = new double[lista.Length / 2];
+        var esquerda = new double[lista.Length / 2 ];
+        var contadorEsquerda = lista.Length - 1;
+
+        for (var contadorDireita = 0; contadorDireita < lista[indicePivo]; contadorDireita++)
+        {
+            if (lista[contadorEsquerda] < indicePivo)
+            {
+                var temp = lista[contadorEsquerda];
+                
+            }
+        }
 
         return default(double[]);
     }
