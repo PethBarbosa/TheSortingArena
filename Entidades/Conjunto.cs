@@ -4,6 +4,5 @@
     {
         public string? lista { get; set; }
 
-        public TipoAlgoritmo TipoAlgoritmo { get; set; }
     }
 }
