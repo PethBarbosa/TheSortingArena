@@ -1,6 +1,3 @@
-using Microsoft.AspNetCore.Mvc;
-using System.Reflection.Metadata.Ecma335;
-
 namespace TheSortingArena.Algoritmos;
 
 public class QuickSort
@@ -15,32 +12,38 @@ public class QuickSort
     public double[] OrderBy()
     {
 
-        var lista = this.Bubbles;
-        var listaOrdenada = OrdenarRecursivo(lista);
+        var lista = this.Bubbles; 
+        OrdenarRecursivo(lista, 0, lista.Length - 1);
 
-        return listaOrdenada;
+        return lista;
     }
 
-    private double[] OrdenarRecursivo(double[] lista)
+    private void OrdenarRecursivo(double[] lista, int indiceInicial, int IndicePivo)
     {
-        var pivoValor = lista[lista.Length - 1];
-        var  pivoIndice = lista.Length - 1;
-        var indice = -1;
-        for(var contador = 0; contador < lista.Length; contador ++)
+  
+        var indice = indiceInicial - 1;
+        var pivo = lista[IndicePivo];
+
+        for (var cont = indiceInicial; cont <= IndicePivo; cont++)
         {
-            if (lista[contador] > pivoValor)
+            if (lista[cont] <= pivo)
             {
                 indice++;
-                Trocar(lista, lista[contador], pivoIndice);
-                
-            }    
+                Trocar(lista, indice, cont);
+            }
         }
+        
+        if(indice != IndicePivo)
+            OrdenarRecursivo( lista, indiceInicial, indice);
+        if (indice < IndicePivo)
+            OrdenarRecursivo( lista, indice + 1, IndicePivo);
 
-        return default(double[]);
     }
 
-    private void Trocar(double[] lista, double a, double b)
+    private void Trocar(double[] lista, int indiceAtual, int indicaValorEncontrado)
     {
-
+        var temp = lista[indiceAtual];
+        lista[indiceAtual] = lista[indicaValorEncontrado];
+        lista[indicaValorEncontrado] = temp;
     }
 }
