@@ -18,7 +18,7 @@ public class SelectionsortController : ControllerBase
             var bodyRetorno = new Dictionary<string, string>();
             var temporizador = new Stopwatch();
 
-             var conjunto = new BubbleSort(listaValida){};
+             var conjunto = new SeletionSort(listaValida){};
              temporizador.Start();
              var listaOrdenada = conjunto.OrderBy();
              temporizador.Stop();
