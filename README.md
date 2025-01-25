@@ -1,2 +1,2 @@
 # TheSortingArena
-Rinha de Algoritmos de ordenação
+API - Rinha de Algoritmos de ordenação
